@@ -4,18 +4,30 @@ import { Link, Outlet } from "react-router-dom"
 export function Nav() {
     return (
         <>
-            <div class="row bg-dark justify-content-center fixed-top" style={{ "opacity": 0.9 }}>
-                <div class="col-md-6 text-white text-start px-4 py-1 ">
+
+            <div class="navbar navbar-expand-lg row bg-dark justify-content-center fixed-top navbar-dark" style={{ "opacity": 0.9 }}>
+                <div class="col-md-6 col-9 text-white text-start px-md-4 py-md-1 px-3">
                     <Link to="/" class="fs-1 text-danger pe-3 " style={{ "textDecoration": "none" }}>學 餐</Link>
+                    <br class="d-md-none d-block" />
                     只 | 款 | 待 | 心 | 中 | 最 | 重 | 要 | 的 | 人
                 </div>
-                <div class="col-md-6 text-white text-end px-4 py-1 row  align-items-center">
-                    <nav class="">
-                        <Link to="/About" class="fs-5 text-white btn mx-2">關於我們</Link>
-                        <Link to="/Menu" class="fs-5 text-white btn  mx-2">珍藏美饌</Link>
-                        <Link to="/Delivery" class="fs-5 text-white btn  mx-2 btn-primary">外送服務</Link>
+                <div class="col-3  row d-block d-md-none">
+                    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon justify-content-center"></span>
+                    </button>
 
-                        <Link to="/Reserve" class="fs-5 text-white btn mx-2 bg-danger">餐聽訂位</Link>
+                </div>
+
+                <div class="col-md-6  text-white text-end px-4 py-1 row  align-items-center collapse navbar-collapse" id="navbarSupportedContent">
+                    <nav class="navbar-nav justify-content-end">
+                        <Link to="/About" class="fs-5 text-white btn mx-2 nav-item">關於我們</Link>
+                        <Link to="/Menu" class="fs-5 text-white btn  mx-2 nav-item">珍藏美饌</Link>
+                        <Link to="/Delivery" class="d-md-block d-none fs-5 text-white btn btn-primary  mx-2  nav-item">外送服務</Link>
+                        <Link to="/Delivery" class="d-md-none d-block fs-5 text-white btn   mx-2  nav-item">外送服務</Link>
+
+                        <Link to="/Reserve" class="d-md-block d-none fs-5 text-white btn btn-danger mx-2  nav-item">餐聽訂位</Link>
+                        <Link to="/Reserve" class="d-md-none d-block fs-5 text-white btn  mx-2  nav-item">餐聽訂位</Link>
+
                     </nav>
 
 
@@ -34,8 +46,15 @@ export function Nav() {
 export function Home() {
     return (
         <>
-            <div class="row bg-white justify-content-center">
-                <div id="carouselExampleCaptions " class="carousel slide  p-0" data-bs-ride="carousel">
+            <div class="row  d-md-none d-block">
+                <img class="img-fluid p-0" src="https://www.tripodking.com.tw/upload/adrv/1711292149240000001.jpg"></img>
+
+            </div>
+
+
+            <div class="row bg-white justify-content-center  d-md-block d-none">
+
+                <div id="carouselExampleCaptions " class="carousel slide  p-0 " data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                             aria-current="true" aria-label="Slide 1"></button>
@@ -110,20 +129,24 @@ export function Home() {
 export function Main() {
     return (
         <>
-            <div class="row justify-content-center text-white p-5 " style={{ backgroundColor: "black" }}>
-                <h class="text-center fs-1"><b class='fs-1 text-danger pe-3'>|  </b>最美味的經典之最，<b class="text-danger">學 餐</b></h>
-                <div class="row mt-5  bg-white pt-5">
-                    <h1 class="text-center text-dark">
+            <div class="row justify-content-center text-white p-md-5 pt-sm-5 " style={{ backgroundColor: "black" }}>
+                <h1 class="col-md-12 text-center fs-1 py-3 p-md-0"><b class=' text-danger  ' >|  </b>最美味的經典之最，<b class="text-danger">學 餐</b></h1>
+                <div class="row mt-md-5  bg-white pt-md-5 p-0 " >
+                    <h1 class="text-center text-dark d-none d-md-block ">
 
                         最 新 消 息
                     </h1>
-                    <div class="col-md-6 p-5 text-dark">
+                    <div class="col-md-6 p-md-5 p-0 text-dark">
 
 
                         <img class="img-fluid" src="https://khh.travel/content/images/static/4-1-6-09.jpg"></img>
 
                     </div>
-                    <div class="col-md-6 p-5 text-dark">
+                    <div class="col-md-6 p-md-5 p-1 py-3 text-dark">
+                        <h1 class="text-center text-dark d-block d-md-none mb-4">
+
+                            最 新 消 息
+                        </h1>
                         <div>
                             <b class="text-danger"> | </b>2023.04.15 營業時間公告: 4月19日(三) 暫停營業一日
 
@@ -151,18 +174,45 @@ export function Main() {
 
                     </div>
                 </div>
-                <div class="row mt-5 bg-dark p-0">
-                    <div class="col-md-6 text-white p-5">
+                <div class="row mt-md-5  bg-dark p-0">
+                    <img class="img-fluid col-md-6 p-0 d-md-none d-block wh-100" src="https://www.oldsichuan.com.tw/img/officialHome/1622085636_foodImg1.jpg"></img>
+
+                    <div class="col-md-6 text-white p-md-5 py-3">
                         <h1 class="text-center"><b class="text-danger"> | </b>經  營  理 念</h1>
                         <br />
                         <p class="px-5 text-center fs-2">味在學餐 | 吃在台灣</p>
-                        <p class="px-5 text-center fs-5">「我們的餐廳致力於提供高品質的美食和優質的服務，</p>
-                        <p class="px-5 text-center fs-5">讓每一位客人都感受到家的溫馨和尊重。</p>
-                        <p class="px-5 text-center fs-5">我們堅持使用新鮮、有機的食材，搭配經過精心研發的菜單，</p>
-                        <p class="px-5 text-center fs-5">旨在為客人帶來最美味、最健康的飲食體驗。</p>
-                        <p class="px-5 text-center fs-5">此外，我們的服務團隊將以親切、專業的態度，為客人提供個性化的餐飲體驗，</p>
-                        <p class="px-5 text-center fs-5">以滿足不同客人的需求和期望。最重要的是，我們希望每一位客人</p>
-                        <p class="px-5 text-center fs-5">在用餐後都能夠感受到心靈的滿足，並成為我們忠實的支持者和推薦者。」</p><br />
+                        <div class="d-md-none d-block">
+                            <p class="px-md-5  text-center fs-5">
+                                「我們的餐廳致力於提供高品質的美食和優質的服務，
+
+                                讓每一位客人都感受到家的溫馨和尊重。
+
+                                我們堅持使用新鮮、有機的食材，搭配經過精心研發的菜單，
+
+                                旨在為客人帶來最美味、最健康的飲食體驗。
+
+                                此外，我們的服務團隊將以親切、專業的態度，為客人提供個性化的餐飲體驗，
+
+                                以滿足不同客人的需求和期望。最重要的是，我們希望每一位客人
+
+                                在用餐後都能夠感受到心靈的滿足，並成為我們忠實的支持者和推薦者。」
+
+                            </p>
+
+                        </div>
+
+                        <div class="d-md-block d-none">
+                            <p class="px-5 text-center fs-5">「我們的餐廳致力於提供高品質的美食和優質的服務，</p>
+                            <p class="px-5 text-center fs-5">讓每一位客人都感受到家的溫馨和尊重。</p>
+                            <p class="px-5 text-center fs-5">我們堅持使用新鮮、有機的食材，搭配經過精心研發的菜單，</p>
+                            <p class="px-5 text-center fs-5">旨在為客人帶來最美味、最健康的飲食體驗。</p>
+                            <p class="px-5 text-center fs-5">此外，我們的服務團隊將以親切、專業的態度，為客人提供個性化的餐飲體驗，</p>
+                            <p class="px-5 text-center fs-5">以滿足不同客人的需求和期望。最重要的是，我們希望每一位客人</p>
+                            <p class="px-5 text-center fs-5">在用餐後都能夠感受到心靈的滿足，並成為我們忠實的支持者和推薦者。」</p>
+
+                        </div>
+
+                        <br />
                         <div class="row justify-content-center ">
                             <Link to="/About" class="btn btn-bg col-md-2 mx-1">關於我們</Link>
 
@@ -173,7 +223,7 @@ export function Main() {
 
 
                     </div>
-                    <img class="img-fluid col-md-6 p-0" src="https://www.oldsichuan.com.tw/img/officialHome/1622085636_foodImg1.jpg"></img>
+                    <img class="img-fluid col-md-6 p-0 d-md-block d-none" src="https://www.oldsichuan.com.tw/img/officialHome/1622085636_foodImg1.jpg"></img>
 
 
 
@@ -182,7 +232,7 @@ export function Main() {
 
 
 
-            </div>
+            </div >
 
 
         </>
@@ -193,46 +243,59 @@ export function Main() {
 
 export function Footer() {
     return (
-        <div class="row  bg-dark p-1 text-white ">
-            <div class="col-md-6">
-                <h1 class="fs-5">
-                    <b class='fs-1 text-danger pe-3'>學 餐  </b> 只 | 款 | 待 | 心 | 中 | 最 | 重 | 要 | 的 | 人
+        <>
+            
+            <div class="row  bg-dark pt-2 p-md-1 text-white mt-2 mt-md-0">
+                <div class="col-md-6">
+                    <h1 class="fs-5">
+                        <b class='fs-1 text-danger pe-3'>學 餐 <br class="d-block d-md-none" /> </b> 只 | 款 | 待 | 心 | 中 | 最 | 重 | 要 | 的 | 人
 
 
-                </h1>
-                <p class="">
-                    Copyright © 學餐 all rights reserved. Designed by Flashaim
+                    </h1>
+                    <p class="">
+                        Copyright © 學餐 all rights reserved. Designed by Flashaim
 
-                </p>
-            </div>
-            <div class="col-md-6 row align-items-center justify-content-end">
-                <div class=" col-md-3">
-                    <p class="mb-1">※ 營業時間</p>
-                    <p class="m-0">午 11:30 ~ 14:30</p>
-                    <p class="m-0">晚 17:30 ~ 22:00</p>
+                    </p>
+                </div>
+                <div class="col-md-6  align-items-center justify-content-end">
+                    <div class="row">
+                    <div class=" col-md-3 d-block d-md-none">
+                            <p class="mb-1">※ 營業時間 : 午 11:30 ~ 14:30 | 晚 17:30 ~ 22:00</p>
+                            <p class="mb-1">※ 客服電話 : (02) 2519966</p>
+
+
+
+                        </div>
+                        <div class=" col-md-3 d-md-block d-none">
+                            <p class="mb-1">※ 營業時間</p>
+                            <p class="m-0">午 11:30 ~ 14:30</p>
+                            <p class="m-0">晚 17:30 ~ 22:00</p>
+
+
+                        </div>
+                        <div class=" col-md-9 row justify-content-end p-md-3 d-none d-md-block">
+                            <Link to="/About" class="btn btn-bg col-md-2 mx-1">關於我們</Link>
+                            <Link to="/Menu" class="btn btn-bg col-md-2 mx-1">珍藏美饌</Link>
+                            <Link to="/Reserve" class="btn btn-bg col-md-2 mx-1">餐聽訂位</Link>
+                            <Link to="/Delivery" class="btn btn-bg col-md-2 mx-1">外送服務</Link>
+
+                        </div>
+
+
+                    </div>
 
 
 
 
 
                 </div>
-                <Link to="/About" class="btn btn-bg col-md-2 mx-1">關於我們</Link>
-                <Link to="/Menu" class="btn btn-bg col-md-2 mx-1">珍藏美饌</Link>
-                <Link to="/Reserve" class="btn btn-bg col-md-2 mx-1">餐聽訂位</Link>
-                <Link to="/Delivery" class="btn btn-bg col-md-2 mx-1">外送服務</Link>
 
-                {/* <button class="btn-bg col-md-2 mx-1"> <b>關於我們</b></button>
-                <button class="btn-bg col-md-2 mx-1"> <b>珍藏美饌</b></button>
-                <button class="btn-bg col-md-2 mx-1"> <b>餐聽訂位</b></button>
-                <button class="btn-bg col-md-2 mx-1"> <b>外送服務</b></button> */}
+
 
 
             </div>
 
-
-
-
-        </div>
+        </>
 
     )
 

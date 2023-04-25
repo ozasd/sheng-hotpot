@@ -4,10 +4,10 @@ import { Link } from "react-router-dom"
 export function Menu() {
     return (
         <>
-            <div class="row bg-dark justify-content-center ">
+            <div class="row bg-dark justify-content-center  d-md-block d-none">
                 <img class="img-fluid p-0" src="https://www.tripodking.com.tw/upload/adrv/1711292149240000001.jpg"></img>
 
-                <div class="title text-white">
+                <div class="title text-white ">
                     <h1 ><b class="text-warning ">| </b>探 索 <b >學 餐</b> Explore</h1>
                     <br />
                     <p class="fs-3 text-white">每一口 都是觸動人心的美味饗宴</p>
@@ -17,7 +17,7 @@ export function Menu() {
 
 
             </div>
-            <div class="row  justify-content-center text-white p-4" style={{ backgroundColor: "black" }}>
+            <div class="row  justify-content-center text-white p-md-4 p-0" style={{ backgroundColor: "black" }}>
                 <div class="col-md-3 bg-white p-0">
                     <img class="img-fluid p-0" src="https://www.tripodking.com.tw/img/about_img.jpg"></img>
 

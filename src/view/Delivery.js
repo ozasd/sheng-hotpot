@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom"
-var menu = [['招牌鴛鴦鍋', ' (龍骨鍋/麻辣鍋)', '1088 '], ['四川麻辣鍋', ' (麻辣鍋)', '788 '], ['大汗龍骨鍋', ' (龍骨鍋)', '688 ']]
+var menu = [['招牌鴛鴦鍋', ' (龍骨鍋/麻辣鍋)', '988 '], ['四川麻辣鍋', ' (麻辣鍋)', '788 '], ['大汗龍骨鍋', ' (龍骨鍋)', '688 ']]
 // var orderDetail = []
 
 
@@ -38,7 +38,7 @@ export function Delivery() {
         }
 
         return (
-            <div class="col-md-4">
+            <div class="col-md-4 ">
                 <img class="img-fluid" src='https://www.oldsichuan.com.tw/images/official/abimg.png'></img>
                 <p><b class="fs-3"><b class=' text-danger '>| </b>{props.item[0]} </b> {props.item[1]}</p>
                 <hr />
@@ -51,19 +51,19 @@ export function Delivery() {
                 <p class="fs-4 text-end">NT<b class="text-danger fs-2  "> {props.item[2]}</b> 元</p>
 
                 <div class="row justify-content-around">
-                    <div class="form-check col-md-3">
+                    <div class="form-check col-md-3 col-3">
                         <input class={"form-check-input  radio" + props.i} value='小辣' type="radio" name={"radio" + props.i} id="flexRadioDefault1" />
                         <label class="form-check-label" for="flexRadioDefault1">
                             小辣
                         </label>
                     </div>
-                    <div class="form-check  col-md-3">
+                    <div class="form-check  col-md-3 col-3">
                         <input class={"form-check-input  radio" + props.i} value='中辣' type="radio" name={"radio" + props.i} id="flexRadioDefault1" />
                         <label class="form-check-label" for="flexRadioDefault1">
                             中辣
                         </label>
                     </div>
-                    <div class="form-check  col-md-3">
+                    <div class="form-check  col-md-3 col-3">
                         <input class={"form-check-input  radio" + props.i} value='大辣' type="radio" name={"radio" + props.i} id="flexRadioDefault2" checked />
                         <label class="form-check-label" for="flexRadioDefault2">
                             大辣
@@ -72,6 +72,7 @@ export function Delivery() {
 
                 </div>
                 <button id={props.i} onClick={(e) => { Order(e) }} class="btn btn-outline-light my-3">加入</button>
+                <hr class="d-md-none d-block"/>
             </div>
         )
 
@@ -84,7 +85,7 @@ export function Delivery() {
             <div class="row bg-dark justify-content-center ">
                 <img class="img-fluid p-0" src="https://www.oldsichuan.com.tw/img/officialHome/1637304208_bottomBanner.jpg"></img>
 
-                <div class="title text-white">
+                <div class="title text-white d-md-block d-none">
                     <h1 ><b class="text-warning ">| </b>探 索 <b >學 餐</b> Explore</h1>
                     <br />
                     <p class="fs-3 text-white">每一口 都是觸動人心的美味饗宴</p>
@@ -94,7 +95,7 @@ export function Delivery() {
 
 
             </div>
-            <div class="row  justify-content-center text-white p-4" style={{ backgroundColor: "black" }}>
+            <div class="row  justify-content-center text-white p-md-4 p-0" style={{ backgroundColor: "black" }}>
                 <div class="col-md-8 bg-dark p-3">
                     <h1 class="text-center ">外送菜單</h1>
                     <div class="row">
@@ -106,21 +107,21 @@ export function Delivery() {
 
                 </div>
                 {(data.length > 0) && (
-                    <div class="col-md-4 bg-light p-4">
+                    <div class="col-md-4 bg-light p-md-4 p-1">
                         <h1 class="text-center text-dark">購物車</h1>
                         <div class="row   p-2 text-dark">
                             <div class="col-md-12 text-dark row justify-content-center">
                                 <div class="row ">
-                                    <div class="col-md-5">
+                                    <div class="col-md-5 col-5">
                                         餐點
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-2">
                                         辣度
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-2">
                                         金額
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 col-3">
 
                                     </div>
 
@@ -130,9 +131,7 @@ export function Delivery() {
                                 <OrderDetail item={data} />
                             </div>
                         </div>
-                        {/* <div class="bg-dark">
-                        <h1>123</h1>
-                    </div> */}
+                        
                         <h2 class="text-center text-dark mt-5">輸入外送資訊</h2>
                         <hr class="text-dark" />
                         <div class="row justify-content-center ">
@@ -186,16 +185,16 @@ export function Delivery() {
             <>
                 {Array.from(props.item).map((item, i) => (
                     <div class="row mb-1">
-                        <div class="col-md-5">
+                        <div class="col-md-5 col-5">
                             {i + 1}. {item[0]}
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-2">
                             {item[1]}
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-2">
                             NT.{item[2]}
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-3">
                             <button onClick={() => setdata(data.filter((item, index) => index !== i))} class="btn btn-danger">刪除</button>
                         </div>
 

@@ -161,7 +161,7 @@ export function Reserve() {
             <div class="row bg-dark justify-content-center ">
                 <img class="img-fluid p-0" src="https://www.tripodking.com.tw/upload/adrv/1711292149240000001.jpg"></img>
 
-                <div class="title text-white">
+                <div class="title text-white d-none d-md-block">
                     <h1 ><b class="text-warning ">| </b>探 索 <b >學 餐</b> Explore</h1>
                     <br />
                     <p class="fs-3 text-white">每一口 都是觸動人心的美味饗宴</p>
@@ -172,7 +172,7 @@ export function Reserve() {
 
             </div>
             <div class="row  justify-content-center text-white p-4" style={{ backgroundColor: "black" }}>
-                <h class="text-center fs-1"><b class='fs-1 text-danger py-4'>|  </b>最美味的經典之最，<b class="text-danger">學 餐</b></h>
+                <h class="text-center fs-md-1 fs-2"><b class='fs-1 text-danger py-4'>|  </b>最美味的經典之最，<b class="text-danger">學 餐</b></h>
 
             </div>
             <div class="row justify-content-center text-white" style={{ backgroundColor: "black" }}>
@@ -184,7 +184,7 @@ export function Reserve() {
 
 
                 </div>
-                {(reserved != "none") && (<div class="col-md-4 my-3  bg-light text-dark p-5">
+                {(reserved != "none") && (<div class="col-md-4 my-3  bg-light text-dark p-md-5 p-2 py-5">
                     <h2 class="text-center">確認訂位與填寫聯絡資訊</h2>
                     <hr />
 
