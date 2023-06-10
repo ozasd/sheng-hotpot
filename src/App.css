@@ -60,3 +60,32 @@
   color: $carousel-caption-color;
   text-align: center;
 }
+.nav-horver-top{
+  position: relative;
+  z-index: 2; /* 设置较低的z-index值 */
+
+}
+.nav-horver{
+  position: relative;
+  z-index: 1; /* 设置较低的z-index值 */
+}
+.nav-horver::before{
+  content: ''; /* 必须有content属性 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  color: white;
+  z-index: 2; /* 设置较高的z-index值 */
+  transition: width 0.3s ease; /* 过渡效果 */
+  background-color: none;
+}
+
+.nav-horver:hover::before{
+
+  width: 100%;
+  background-color: #dc3545;
+  color: black;
+
+}

@@ -20,13 +20,18 @@ export function Nav() {
 
                 <div class="col-md-6  text-white text-end px-4 py-1 row  align-items-center collapse navbar-collapse" id="navbarSupportedContent">
                     <nav class="navbar-nav justify-content-end">
-                        <Link to="/About" class="fs-5 text-white btn mx-2 nav-item">關於我們</Link>
-                        <Link to="/Menu" class="fs-5 text-white btn  mx-2 nav-item">珍藏美饌</Link>
-                        <Link to="/Delivery" class="d-md-block d-none fs-5 text-white btn btn-primary  mx-2  nav-item">外送服務</Link>
+                        <Link to="/About" class="d-md-block d-none fs-5 text-white  mx-2 nav-item border-danger border-bottom border-4 p-2  nav-horver text-decoration-none"><span className="nav-horver-top">關於我們</span></Link>
+                        <Link to="/About" class="d-md-none d-block fs-5 text-white btn   mx-2  nav-item">關於我們</Link>
+
+                        
+                        <Link to="/Menu" class="fs-5 d-md-block d-none text-white  mx-2 nav-item border-danger border-bottom border-4 p-2  nav-horver text-decoration-none"><span className='nav-horver-top'>珍藏美饌</span></Link>
+                        <Link to="/Menu" class="d-md-none d-block fs-5 text-white btn   mx-2  nav-item">珍藏美饌</Link>
+
+                        <Link to="/Delivery" class="d-md-block d-none fs-5 text-white    mx-2  nav-item  border-danger border-bottom border-4 p-2  nav-horver text-decoration-none"><span className='nav-horver-top'>外送服務</span></Link>
                         <Link to="/Delivery" class="d-md-none d-block fs-5 text-white btn   mx-2  nav-item">外送服務</Link>
 
-                        <Link to="/Reserve" class="d-md-block d-none fs-5 text-white btn btn-danger mx-2  nav-item">餐聽訂位</Link>
-                        <Link to="/Reserve" class="d-md-none d-block fs-5 text-white btn  mx-2  nav-item">餐聽訂位</Link>
+                        <Link to="/Reserve" class="d-md-block d-none fs-5 text-white   mx-2  nav-item  border-danger border-bottom border-4 p-2  nav-horver text-decoration-none"><span className='nav-horver-top'>餐廳訂位</span></Link>
+                        <Link to="/Reserve" class="d-md-none d-block fs-5 text-white  btn mx-2  nav-item ">餐廳訂位</Link>
 
                     </nav>
 
@@ -166,6 +171,10 @@ export function Main() {
                             <hr />
                         </div>
                         <div>
+                            <b class="text-danger"> | </b>2023.02.22 學餐品牌月＊優惠活動，四月優惠活動 第二件七五折
+                            <hr />
+                        </div>
+                        <div>
                             <b class="text-danger"> | </b>2023.02.15 營業時間公告: 2月15日(三) 暫停營業一日
 
                             <hr />
@@ -179,36 +188,25 @@ export function Main() {
 
                     <div class="col-md-6 text-white p-md-5 py-3">
                         <h1 class="text-center"><b class="text-danger"> | </b>經  營  理 念</h1>
-                        <br />
+                        <hr/>
+
                         <p class="px-5 text-center fs-2">味在學餐 | 吃在台灣</p>
                         <div class="d-md-none d-block">
                             <p class="px-md-5  text-center fs-5">
-                                「我們的餐廳致力於提供高品質的美食和優質的服務，
-
-                                讓每一位客人都感受到家的溫馨和尊重。
-
-                                我們堅持使用新鮮、有機的食材，搭配經過精心研發的菜單，
-
-                                旨在為客人帶來最美味、最健康的飲食體驗。
-
-                                此外，我們的服務團隊將以親切、專業的態度，為客人提供個性化的餐飲體驗，
-
-                                以滿足不同客人的需求和期望。最重要的是，我們希望每一位客人
-
-                                在用餐後都能夠感受到心靈的滿足，並成為我們忠實的支持者和推薦者。」
+                                我們是一家致力於提供美食與服務的麻辣火鍋店，提供新鮮、高品質、無添加的食材，以客戶至上的理念為基礎，追求創新與卓越，同時關注社會責任，讓顧客能夠享受到最地道、最美味的麻辣火鍋。
 
                             </p>
 
                         </div>
 
                         <div class="d-md-block d-none">
-                            <p class="px-5 text-center fs-5">「我們的餐廳致力於提供高品質的美食和優質的服務，</p>
-                            <p class="px-5 text-center fs-5">讓每一位客人都感受到家的溫馨和尊重。</p>
+                            <p class="px-5 text-center fs-5">我們是一家致力於提供美食與服務的麻辣火鍋店，提供新鮮、高品質、無添加的食材，以客戶至上的理念為基礎，追求創新與卓越，同時關注社會責任，讓顧客能夠享受到最地道、最美味的麻辣火鍋。</p>
+                            {/* <p class="px-5 text-center fs-5">讓每一位客人都感受到家的溫馨和尊重。</p>
                             <p class="px-5 text-center fs-5">我們堅持使用新鮮、有機的食材，搭配經過精心研發的菜單，</p>
                             <p class="px-5 text-center fs-5">旨在為客人帶來最美味、最健康的飲食體驗。</p>
                             <p class="px-5 text-center fs-5">此外，我們的服務團隊將以親切、專業的態度，為客人提供個性化的餐飲體驗，</p>
                             <p class="px-5 text-center fs-5">以滿足不同客人的需求和期望。最重要的是，我們希望每一位客人</p>
-                            <p class="px-5 text-center fs-5">在用餐後都能夠感受到心靈的滿足，並成為我們忠實的支持者和推薦者。」</p>
+                            <p class="px-5 text-center fs-5">在用餐後都能夠感受到心靈的滿足，並成為我們忠實的支持者和推薦者。」</p> */}
 
                         </div>
 
@@ -244,7 +242,7 @@ export function Main() {
 export function Footer() {
     return (
         <>
-            
+
             <div class="row  bg-dark pt-2 p-md-1 text-white mt-2 mt-md-0">
                 <div class="col-md-6">
                     <h1 class="fs-5">
@@ -259,7 +257,7 @@ export function Footer() {
                 </div>
                 <div class="col-md-6  align-items-center justify-content-end">
                     <div class="row">
-                    <div class=" col-md-3 d-block d-md-none">
+                        <div class=" col-md-3 d-block d-md-none">
                             <p class="mb-1">※ 營業時間 : 午 11:30 ~ 14:30 | 晚 17:30 ~ 22:00</p>
                             <p class="mb-1">※ 客服電話 : (02) 2519966</p>
 

@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "e-restaurnat"
-  }
+    "default": "e-restaurnat",
+    "sheng-hotpot": "sheng-hotpot",
+    "e-restaurnat": "e-restaurnat"
+  },
+  "targets": {},
+  "etags": {}
 }
